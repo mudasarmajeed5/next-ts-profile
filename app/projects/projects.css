@@ -1,0 +1,62 @@
+
+
+.headingID{
+  margin: 0;
+  color: var(--accent);
+  left: calc(50% + 130px);
+  font-size: 56px;
+  font-weight: 400;
+  letter-spacing: -3px;
+  line-height: 1.2;
+  position: absolute;
+}
+@media only screen and (max-width:767px){
+  .headingID{
+    top: 100px;
+    left: 50%;
+  }
+}
+html {
+  scroll-snap-type: y mandatory;
+}
+
+
+#imageid {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  scroll-snap-align: center;
+  perspective: 500px;
+}
+
+#imageid > div {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  max-height: 90vh;
+  margin: 20px;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.portfolio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--accent);
+  bottom: 100px;
+}

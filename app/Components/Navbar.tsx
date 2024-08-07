@@ -10,11 +10,11 @@ const Navbar = () => {
   const [DropDown, setDropDown] = useState(false)
   const router = useRouter()
   return (
-    <div className='text-center backdrop-blur-sm bg-[#2B1051] sticky top-0 pt-4 pb-2 px-4 flex md:justify-around justify-between items-center text-[--text-color]'>
+    <div className='text-center backdrop-blur-sm bg-[#2B1051] sticky z-50 top-0 pt-4 pb-2 px-4 flex justify-between items-center text-[--text-color]'>
     <div>
     <ul className='flex items-center gap-3'>
       <li className="md:text-4xl text-3xl text-white"><IoLogoMastodon /></li>
-      <li onClick={()=>router.push('/')} className="md:text-3xl text-2xl cursor-pointer underline-offset-4 navbar-name">Mudassar <span className="font-bold">Majeed</span></li>
+      <li onClick={()=>router.push('/')} className="md:text-3xl text-2xl cursor-pointer underline-offset-4 navbar-name">Portfolio</li>
     </ul>  
     </div>
     <button className="getquote px-2 py-1 rounded-lg md:block hidden">

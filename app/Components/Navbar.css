@@ -77,7 +77,7 @@
 .socials {
     position: fixed;
     bottom: 10%;
-    right: 0px;
+    right: 2px;
     display: flex;
     flex-direction: column;
     gap: 5px;
