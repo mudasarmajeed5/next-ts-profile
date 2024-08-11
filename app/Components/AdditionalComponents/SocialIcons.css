@@ -1,0 +1,14 @@
+
+.socials {
+    position: fixed;
+    bottom: 10%;
+    right: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.socials button{
+    position: relative;
+    right: -95px;
+    transition: all 0.2s ease;
+}

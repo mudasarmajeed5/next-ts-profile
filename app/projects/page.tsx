@@ -37,7 +37,6 @@ const Projects: React.FC = () => {
     damping: 30,
     restDelta: 0.001
   });
-  console.log(scaleX)
   return (
     <Layout>
       <div className="min-h-screen bg-[--background]">
