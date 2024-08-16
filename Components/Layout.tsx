@@ -3,7 +3,7 @@
 import { ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Footer from './Footer';
-import Socialicons from './AdditionalComponents/Socialicons';
+import Socialicos from './AdditionalComponents/SocialIcos';
 import Navbar from './Navbar';
 import Cursor from './AdditionalComponents/Cursor';
 interface LayoutProps {
@@ -14,7 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div>
       <Cursor/>
-      <Socialicons/>
+      <Socialicos/>
       <Navbar/>
       <div>
         <AnimatePresence mode="wait">

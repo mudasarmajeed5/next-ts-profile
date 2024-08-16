@@ -6,7 +6,10 @@
 button, a {
   cursor: pointer;
 }
-
+.relative-z-1{
+  position: relative;
+  z-index: 1;
+}
 :root {
   --black: #000000;
   --ash-black: #222;

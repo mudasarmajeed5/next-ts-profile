@@ -1,15 +1,22 @@
 // pages/index.tsx
 'use client'
 import { useRef } from 'react';
-import Layout from './Components/Layout';
+import Layout from '@/Components/Layout';
 import Link from 'next/link';
-import Button from './Components/AdditionalComponents/Button';
-import Card from './Components/AdditionalComponents/Card';
+import Button from '@/Components/AdditionalComponents/Button';
+import Card from '@/Components/AdditionalComponents/Card';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import "./globals.css"
-import ScrollLine from './Components/AdditionalComponents/ScrollLine';
+import Projects from '@/Components/AdditionalComponents/Projects';
 const Home: React.FC = () => {
-  
+  const lineStyle: React.CSSProperties = {
+    width: `100%`,
+    height: '2px',
+    boxShadow: '0px 0px 5px var(--accent)',
+    backgroundColor: 'var(--sky)',
+    transition: 'width 0.3s ease-out',
+    margin: '70px 0',
+  };
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
@@ -55,44 +62,40 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
-        <ScrollLine/>
-        <section className='w-4/5 lg:w-3/5 mx-auto'>
+        <div style={lineStyle}></div>
+        <section className='w-4/5 lg:w-4/5 2xl:w-3/5 mx-auto'>
           <div className='relative my-5'>
             <div className='circle_gradient'></div>
 
             <div className='flex gap-4 my-4 flex-col md:flex-row'>
-              <motion.div ref={ref1} style={{ scale: Card_Progress1, opacity: Card_Progress1 }}>
-                <Card title='CIB on the Mobile'
-                  description='Take your client onboard seamlessly by our amazing
-                tool of digital onboard process.'
+              <motion.div className='w-full' ref={ref1} style={{ scale: Card_Progress1, opacity: Card_Progress1 }}>
+                <Card title='My Journey!'
+                  description='My coding journey started with curiosity and has grown into a deep passion for solving complex problems through code.'
                   ImageLink="/images/StackImages/code.png" />
               </motion.div>
-              <motion.div ref={ref2} style={{ scale: Card_Progress2, opacity: Card_Progress2 }}>
-                <Card title='CIB on the PC'
-                  description='Take your client onboard seamlessly by our amazing
-                tool of digital onboard process.'
+              <motion.div className='w-full' ref={ref2} style={{ scale: Card_Progress2, opacity: Card_Progress2 }}>
+                <Card title='Designs? We have your Back.'
+                  description='Futuristic designs and ideas inspire me to push boundaries and innovate with technology for a better tomorrow.'
                   ImageLink="/images/StackImages/coffee.png" />
               </motion.div>
             </div>
 
             <div className='flex gap-4 flex-col md:flex-row'>
-              <motion.div ref={ref3} style={{ scale: Card_Progress3, opacity: Card_Progress3 }}>
-                <Card title='CIB on the Mobile'
-                  description='Take your client onboard seamlessly by our amazing
-                tool of digital onboard process.'
+              <motion.div className='w-full' ref={ref3} style={{ scale: Card_Progress3, opacity: Card_Progress3 }}>
+                <Card title='MONGODB in the Backend'
+                  description='I have 1 year of solid experience in MongoDB with Next.js, enabling smooth integration of databases into modern web applications.'
                   ImageLink="/images/StackImages/Database.png" />
               </motion.div>
-              <motion.div ref={ref4} style={{ scale: Card_Progress4, opacity: Card_Progress4 }}>
-                <Card title='Turning Ideas into Realitites'
-                  description='Take your client onboard seamlessly by our amazing
-                tool of digital onboard process.'
+              <motion.div className='w-full' ref={ref4} style={{ scale: Card_Progress4, opacity: Card_Progress4 }}>
+                <Card title='Turning Ideas into Realities'
+                  description='I have developed the frontend for DHA Gujranwala and created an engaging E-commerce website called EcoGlow'
                   ImageLink="/images/StackImages/Ideas.png" />
               </motion.div>
             </div>
           </div>
         </section>
-        <section className='w-4/5 lg:w-3/5 mx-auto'>
-
+        <section className='w-4/5 lg:w-4/5 2xl:w-3/5 mx-auto'>
+          <Projects/>
         </section>
       </div>
     </Layout>

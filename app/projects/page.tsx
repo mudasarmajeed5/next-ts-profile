@@ -1,7 +1,7 @@
 // pages/projects.tsx
 'use client'
 import './projects.css'
-import Layout from '../Components/Layout';
+import Layout from '@/Components/Layout';
 import { useRef } from "react";
 import {
   motion,
