@@ -1,13 +1,13 @@
 // pages/index.tsx
 'use client'
 import { useRef } from 'react';
-import Layout from '@/Components/Layout';
+import Layout from './Components/Layout';
 import Link from 'next/link';
-import Button from '@/Components/AdditionalComponents/Button';
-import Card from '@/Components/AdditionalComponents/Card';
+import Button from './Components/AdditionalComponents/Button';
+import Card from './Components/AdditionalComponents/Card';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import "./globals.css"
-import Projects from '@/Components/AdditionalComponents/Projects';
+import Projects from './Components/AdditionalComponents/Projects';
 const Home: React.FC = () => {
   const lineStyle: React.CSSProperties = {
     width: `100%`,
@@ -96,6 +96,7 @@ const Home: React.FC = () => {
         </section>
         <section className='w-4/5 lg:w-4/5 2xl:w-3/5 mx-auto'>
           <Projects/>
+          <Link href={"/about"}>About us</Link>
         </section>
       </div>
     </Layout>
